@@ -1,0 +1,345 @@
+/* variables */
+:root{
+    --primary: #B22222;
+    --secondary: rgba(0,0,0);
+  }
+
+section{
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.outer-wrapper{
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+  
+  /* reset */
+  body,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  li{
+    list-style-type: none;
+  }
+  
+  /* base styles */
+  body{
+    background: var(--secondary);
+    overflow-x: hidden;
+    font-family: 'Rubik Regular';
+  }
+  .button{
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    display: inline-block;
+    font-size: 1em;
+  }
+  .button:hover{
+    color: #222;
+    background: var(--primary);
+  }
+  input,textarea{
+    background: rgba(255,255,255,0.05);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #e9b7b1;
+    color: black;
+    font-size: 1em;
+  }
+  
+  /* fonts */
+  @font-face {
+    font-family: 'Rubik Regular';
+    src: url("assets/fonts/Rubik-Regular.ttf") format("ttf"),
+  }
+  h1,h2,h3,h4{
+    color: whitesmoke;
+    font-weight: normal;
+    line-height: 1.4em;
+  }
+  p,a,li{
+    color: whitesmoke;
+    line-height: 1.4em;
+    font-size: 1em;
+  }
+  h1, h3{
+    font-size: 1.2em;
+  }
+  h2{
+    font-size: 1.6em;
+  }
+  h4{
+    font-size: 1.1em;
+  }
+  #right{
+    font-size: .7em;
+  }
+  
+  /* mobile styles */
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  #welcome{
+    font-family: 'bradley hand';
+    font-size: .98em;
+    background-image: url(assets/coffeecup.png);
+    background-repeat: no-repeat;
+    background-size: 75vh;
+    background-position: center;
+    margin-top: 10px;
+  }
+  #welcome h1{
+    text-align: center;
+    margin-top: 125px;
+    color: black;
+  }
+  #welcome nav{
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 125px;
+    color: black;
+  }
+
+  #welcome button:hover{
+    font-size: .7em;
+  }
+  #welcome a:hover{
+    color: crimson;
+    font-size: 1.6em;
+  }
+  
+  #portfolio{
+    padding: 30px 20px;
+  }
+  #portfolio h3{
+    color: whitesmoke;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #portfolio h4{
+    color: whitesmoke;
+  }
+  .projects{
+    margin: 20px 0;
+  }
+  .projects a{
+    grid-column: 1/9;
+    display: flex;
+    margin: 20px 0
+  }
+  .projects a *{
+    margin: 0 20px;
+    max-width: 40%;
+    align-self: center;
+  }
+  .projects h4{
+    color: #e0dbd1
+  }
+  #skills{
+    padding: 30px 20px;
+  }
+  #skills .leading{
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+
+  #skills p{
+    color: #e0dbd1;
+  }
+  #skills h3{
+    text-align: center;
+  }
+  #skills ul{
+    margin: 40px 0;
+  }
+  #skills li{
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+    grid-column: span 4;
+    text-align: center;
+  }
+  #skills img{
+    height: 80px;
+    margin: 10px auto;
+  }
+  #skills p{
+    text-align: center;
+    margin: 0 20px;
+  }
+  #xcontact{
+    padding: 30px 20px;
+    background: black;
+  }
+  #xcontact h3, #xcontact p{
+    margin-bottom: 0;
+    text-align: center;
+  }
+  #xcontact form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  #xcontact input,#xcontact textarea{
+    width: 100%;
+    margin: 10px 0;
+  }
+  #xcontact textarea{
+    max-width: 100%;
+    height: 200px;
+  }
+  #xcontact .button{
+    margin-top: 10px;
+  }
+  
+  /* small tablet styles */
+@media screen and (min-width: 620px){
+    .projects{
+      margin-top: 40px;
+    }
+    .projects a{
+      grid-column: span 4;
+      display: block;
+      margin: 20px 0;
+    }
+    .projects a:last-child{
+      grid-column: 3/7;
+    }
+    .projects a *{
+      margin: 10px;
+      max-width: 60%;
+      margin: 10px 20%;
+    }
+    .projects h4{
+      text-align: center;
+    }
+    #skills{
+      padding: 30px 100px;
+    }
+  }
+  
+  
+  /* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+
+    body{
+      font-size: 18px;
+    }
+    .grid{
+      max-width: 1060px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .leading{
+      margin: 20px 0;
+    }
+    #welcome{
+      padding-bottom: 40px;
+    }
+    .projects a:nth-child(1){
+      grid-column: 2/4;
+    }
+    .projects a:nth-child(2){
+      grid-column: 4/6;
+      padding-top: 140px;
+    }
+    .projects a:nth-child(3){
+      grid-column: 6/8;
+    }
+    .projects a *{
+      max-width: 80%;
+      margin: 30px 10%;
+    }
+    #skills{
+      padding: 30px 20px;
+    }
+    #skills ul{
+      margin: 40px auto;
+    }
+    #skills li{
+      grid-column: span 2;
+    }
+    #skills p{
+      max-width: 600px;
+      margin: 40px auto;
+    }
+  
+  }
+  
+  
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+
+    body{
+      font-size: 18px;
+    }
+    .grid{
+      max-width: 1060px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .leading{
+      margin: 20px 0;
+    }
+    #welcome{
+      padding-bottom: 40px;
+    }
+    .projects a:nth-child(1){
+      grid-column: 2/4;
+    }
+    .projects a:nth-child(2){
+      grid-column: 4/6;
+      padding-top: 140px;
+    }
+    .projects a:nth-child(3){
+      grid-column: 6/8;
+    }
+    .projects a *{
+      max-width: 80%;
+      margin: 30px 10%;
+    }
+    #skills{
+      padding: 30px 20px;
+    }
+    #skills ul{
+      margin: 40px auto;
+    }
+    #skills li{
+      grid-column: span 2;
+    }
+    #skills p{
+      max-width: 600px;
+      margin: 40px auto;
+    }
+  
+  }
+::placeholder{
+    color: whitesmoke;
+}

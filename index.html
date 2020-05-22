@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>John Lynch</title>
+</head>
+<body>
+
+  <div class="outer-wrapper">
+    <div class="wrapper">
+<section id="welcome">
+  <img src="" alt="">
+  <h1>John Lynch<br>Web Design and Development</h1>
+  <nav>
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#xcontact">Contact</a></li>
+      <br>
+      <li>Swipe left >>></li>
+      <li id="right">until it's time to swipe right </li>
+      <br><br>
+    </ul>
+    <a href="mailto:lynch.john.r@gmail.com"><button class="button">Email Me</button></a>
+  </nav>
+  
+</section>  
+
+
+  <section id="portfolio">
+    <h3>Some of my Projects</h3>
+    <div class="projects grid">
+      <a href="http://www.thewaywardbrand.com">
+        <img src="assets/wave.png" alt="project 1">
+        <h4>The Wayward Brand<br>Wordpress</h4>
+      </a>
+      <a href="https://kafeenatedrd1.web.app">
+        <img src="assets/coffee.png" alt="project 2">
+        <h4>KaFeenated RD<br>Firebase</h4>
+      </a>
+      <a href="https://www.divingillustrated.com">
+        <img src="assets/spin.png" alt="project 3">
+        <h4>Diving Illustrated<br>Wordpress</h4>
+      </a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <ul class="grid">
+      <li>
+        <img src="assets/clean.png" alt="frontend">
+        <h4>HTML/CSS/JS</h4>
+      </li>
+      <li>
+        <img src="assets/firebase.png" alt="firebase">
+        <h4>Firebase</h4>
+      </li>
+      <li>
+        <img src="assets/WordPress.png" alt="wordpress">
+        <h4>Wordpress</h4>
+      </li>
+      <li>
+        <img src="assets/adobe-creative-cloud.png" alt="adobe creative">
+        <h4>Adobe Creative</h4>
+      </li>
+    </ul>
+    <p class="leading">I take pride in learning something new everyday. During the covid quarantine I've taken the time to level up and learn new skills. On top of the skills above, I have a good understanding of Git, GitHub, NPM, and feel like Javascript is something you can get better at everyday.</p>
+  </section>
+
+  <section id="xcontact">
+    <h3>Get In Touch</h3>
+    <p class="leading">Let me design and develop your company's next website.</p>
+    <form id="contacts">
+      <input type="text" id="name" placeholder='NAME'>
+      <input type="email" id="email" placeholder='EMAIL'>
+      <input type="phone" id="phone" placeholder='PHONE'>
+      <textarea id="message" placeholder='YOUR MESSAGE'></textarea>
+      <button type="submit" class="button">Lets Chat</button>
+    </form>
+  </section>
+
+  
+  </div>
+</div>
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC217BnpmC-Wftryx3t8TRXeVO60ccG74s",
+    authDomain: "cardioinacup-88d75.firebaseapp.com",
+    databaseURL: "https://cardioinacup-88d75.firebaseio.com",
+    projectId: "cardioinacup-88d75",
+    storageBucket: "cardioinacup-88d75.appspot.com",
+    messagingSenderId: "931287722405",
+    appId: "1:931287722405:web:eba4bb377fdbb6f858a04c",
+    measurementId: "G-6T0GJKKNEG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+</script>
+<script src="db.js"></script>
+</body>
+</html>
